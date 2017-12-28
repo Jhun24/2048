@@ -118,10 +118,10 @@ body{
   width:400px;
   height:400px;
 
-  padding-top:10px;
-  padding-bottom:10px;
+  padding:10px;
 
   background-color:rgb(185,173,161);
+  border-radius:5px;
 }
 
 .game-bar{
@@ -141,7 +141,174 @@ body{
 
   font-weight:700;
   font-size:36px;
+}
 
-  background-color:rgb(229,130,102);
+.game-bar > .null{
+
+  width:calc(~"25% - 10px");
+  height:calc(~"100% - 10px");
+
+  .flex-center;
+
+  border-radius:5px;
+
+  font-weight:700;
+  font-size:36px;
+
+  background-color:rgb(203,192,180);
+}
+
+#c2{
+  background-color:rgb(237,228,219);
+  color:rgb(119,111,113);
+}
+
+#c4{
+  background-color:rgb(230,220,200);
+  color:rgb(119,111,113);
+}
+
+#c8{
+  background-color: rgb(232,180,129);
   color:#fff;
+}
+
+#c16{
+  background-color: rgb(231,154,108);
+  color:#fff;
+}
+
+#c32{
+  background-color: rgb(232,180,129);
+  color:#fff;
+}
+
+#c64{
+  background-color: rgb(228,104,71);
+  color:#fff;
+}
+
+#c128{
+  background-color: rgb(232,208,127);
+  color:#fff;
+}
+
+#c256{
+  background-color: rgb(231,205,113);
+  color:#fff;
+}
+
+#c512{
+  background-color: rgb(230,200,101);
+  color:#fff;
+}
+
+#c1024{
+  background-color: rgb(230,197,90);
+  color:#fff;
+}
+
+#c2048{
+  background-color: rgb(229,194,78);
+  color:#fff;
+}
+
+// 2 :  237 228 219
+
+// 4 :  230 220 200
+
+// 8 :  232 180 129
+
+// 16 : 231 154 108
+
+// 32 : 230,130,102
+
+// 64 : 228,104,71
+
+// 128 : 232,208,127
+
+// 256 : 231,205,113
+
+// 512 : 230,200,101
+
+// 1024 : 230,197,90
+
+// 2048 : 229 194 78
+
+.pop-up{
+  width:100vw;
+  height:100vh;
+
+  background-color: rgba(238, 228, 218, 0.73);
+
+  position: absolute;
+  z-index: 100;
+
+  .flex-center;
+}
+
+.pop-up > div{
+  width:500px;
+  height:500px;
+}
+
+.pop-up > div > h4{
+  text-align:center;
+  font-size:40px;
+  font-weight:600;
+
+  margin-top:20px;
+
+  color:rgb(98,98,98);
+}
+
+.pop-up > div > p{
+  font-size:24px;
+  font-weight:200;
+
+  color:rgb(98,98,98);
+
+  text-align:center;
+
+  margin-top:10px;
+}
+
+.pop-up > .pop-up-box > input{
+  border:none;
+  outline:none;
+
+  width:60%;
+  height:10%;
+
+  margin-left:20%;
+  margin-top:100px;
+
+  padding-left:10px;
+
+  font-size:14px;
+
+  background-color:#fff;
+  border-radius:5px;
+
+  color:#776e65;
+
+  //border:1px solid rgb(98,98,98);
+}
+
+.pop-up > .pop-up-box > .pop-up-btn{
+  width:30%;
+  height:8%;
+
+  .flex-center;
+
+  background-color:#8f7a66;
+  border-radius: 5px;
+
+  font-size:18px;
+  font-weight:400;
+
+  color:#fff;
+
+  margin:auto;
+  margin-top:20px;
 }

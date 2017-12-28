@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
+var sortOn = require('sort-on');
 
 var app = express();
 
@@ -31,7 +32,15 @@ db.once('open', function callback () {
     console.log("Mongo DB ON");
 });
 
+var game = mongoose.Schema({
+    "name":String,
+    "score":String
+});
+
+var gameModel =mongoose.model('gameModel',game);
+
 require('./routes/route')(app);
+require('./routes/game')(app , gameModel , sortOn)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
